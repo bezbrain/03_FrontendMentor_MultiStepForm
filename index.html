@@ -4,9 +4,215 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Hind+Siliguri:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./all.js"></script>
     <title>Multi-step Form</title>
   </head>
   <body>
+    <main>
+      <!--  -->
+      <!-- Side Bar -->
+      <!--  -->
+      <img
+        class="side-img"
+        src="./multi-step-form-main/assets/images/bg-sidebar-desktop.svg"
+        alt="Side-bar"
+      />
+      <aside class="constantAside">
+        <!-- Section One -->
+        <div class="step-one">
+          <span>1</span>
+          <section class="steps-section">
+            <p>STEP 1</p>
+            <p>YOUR INFO</p>
+          </section>
+        </div>
+        <!-- Section Two -->
+        <div class="step-two">
+          <span>2</span>
+          <section class="steps-section">
+            <p>STEP 2</p>
+            <p>SELECT PLAN</p>
+          </section>
+        </div>
+        <!-- Section Three -->
+        <div class="step-three">
+          <span>3</span>
+          <section class="steps-section">
+            <p>STEP 3</p>
+            <p>ADD-ONS</p>
+          </section>
+        </div>
+        <!-- Section Four -->
+        <div class="step-four">
+          <span>4</span>
+          <section class="steps-section">
+            <p>STEP 4</p>
+            <p>SUMMARY</p>
+          </section>
+        </div>
+      </aside>
+      <!--  -->
+      <!-- End of Side Bar -->
+      <!--  -->
+
+      <!--  -->
+      <!-- Article Section (Personal Info) -->
+      <!--  -->
+      <article class="step-one-article">
+        <h1>Personal info</h1>
+        <p>Please provide your name, email address, and phone number.</p>
+        <div class="inputContainer">
+          <p>Name</p>
+          <input type="name" placeholder="e.g. Topper Bello" />
+          <p>Email Address</p>
+          <input type="email" placeholder="e.g. topperbello@email.com" />
+          <p>Phone Number</p>
+          <input type="number" placeholder="e.g. +2348023456789" />
+        </div>
+        <button class="step-one-btn">Next Step</button>
+      </article>
+      <!-- End of Article Section -->
+
+      <!--  -->
+      <!-- Select Your Plan -->
+      <!--  -->
+      <article class="step-two-article">
+        <h1>Select your plan</h1>
+        <p>You have the option of monthly or yearly billing.</p>
+        <div class="plans-container">
+          <!-- Each Plan container -->
+          <div class="arcade">
+            <img
+              src="./multi-step-form-main/assets/images/icon-arcade.svg"
+              alt="arcade"
+            />
+            <h3>Arcade</h3>
+            <p>$9/mo</p>
+          </div>
+          <div class="advanced">
+            <img
+              src="./multi-step-form-main/assets/images/icon-advanced.svg"
+              alt="advanced"
+            />
+            <h3>Advanced</h3>
+            <p>$12/mo</p>
+          </div>
+          <div class="pro">
+            <img
+              src="./multi-step-form-main/assets/images/icon-pro.svg"
+              alt="pro"
+            />
+            <h3>Pro</h3>
+            <p>$15/mo</p>
+          </div>
+        </div>
+        <!-- Duration Section -->
+        <div class="duration-container">
+          <p>
+            Monthly <i class="fa-solid fa-toggle-off"></i
+            ><i class="fa-solid fa-toggle-on"></i> <span>Yearly</span>
+          </p>
+        </div>
+
+        <button class="go-back-btn">Go Back</button>
+        <button class="step-two-btn">Next Step</button>
+      </article>
+
+      <!--  -->
+      <!-- Pick add-ons -->
+      <!--  -->
+      <article class="step-three-article">
+        <h1>Pick add-ons</h1>
+        <p>Add-ons help enhance your gaming experience.</p>
+        <!-- Each add-on container -->
+        <div class="online-service">
+          <input type="checkbox" />
+          <div class="content">
+            <h4>Online service</h4>
+            <p>Access to multiplayer games</p>
+          </div>
+          <p class="price">+$1/mo</p>
+        </div>
+        <div class="larger-storage">
+          <input type="checkbox" />
+          <div class="content">
+            <h4>Larger storage</h4>
+            <p>Extra 1TB of cloud save</p>
+          </div>
+          <p class="price">+$2/mo</p>
+        </div>
+        <div class="customizable-profile">
+          <input type="checkbox" />
+          <div class="content">
+            <h4>Customizable profile</h4>
+            <p>Custom themw on your profile</p>
+          </div>
+          <p class="price">+$2/mo</p>
+        </div>
+
+        <button class="go-back-btn">Go Back</button>
+        <button class="step-three-btn">Next Step</button>
+      </article>
+
+      <!--  -->
+      <!-- Finishing up -->
+      <!--  -->
+      <article class="step-four-article">
+        <h1>Finishing up</h1>
+        <p>Double-check everything looks OK before confirming.</p>
+        <!-- Finish up containers -->
+        <div class="finish-container">
+          <div class="finish-content-con">
+            <div class="finish-content">
+              <p>Arcade (Monthly)</p>
+              <a href="#">Change</a>
+            </div>
+            <p>$9/mo</p>
+          </div>
+          <hr />
+
+          <div class="finsh-online-service">
+            <p>Online service</p>
+            <p>+$1/mo</p>
+          </div>
+          <div class="finsh-larger-storage">
+            <p>Larger storage</p>
+            <p>+$2/mo</p>
+          </div>
+        </div>
+
+        <div class="total-container">
+          <p>Total(per month)</p>
+          <h2>+$12/mo</h2>
+        </div>
+
+        <button class="go-back-btn">Go Back</button>
+        <button class="step-four-btn">Confirm</button>
+      </article>
+
+      <!--  -->
+      <!-- Thank You -->
+      <!--  -->
+      <article class="thank-you">
+        <img
+          src="./multi-step-form-main/assets/images/icon-thank-you.svg"
+          alt="Thank You"
+        />
+        <h1>Thank you</h1>
+        <p>
+          Thanks for confirming your subscription! We hope you have fun using
+          our platform. If you ever need support, please feel free to email us
+          at support@loremgaming.com.
+        </p>
+      </article>
+    </main>
+
     <script src="./main.js"></script>
   </body>
 </html>
