@@ -1,0 +1,74 @@
+/* ======== */
+/* Pick add-ons */
+/* ======== */
+.step-three-article {
+  position: relative;
+  margin-inline: auto;
+  width: 55%;
+  font-size: 14px;
+  margin-top: 20px;
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  .step-three-article {
+    position: static;
+    margin-block: auto;
+    width: 85%;
+    background-color: white;
+    padding: 8% 4%;
+    z-index: 20;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .step-three-article div h4 {
+    font-size: 20px;
+  }
+}
+
+.online-service {
+  margin-top: 2.5vw;
+}
+
+.larger-storage,
+.customizable-profile {
+  margin-top: 5px;
+}
+
+.online-service,
+.larger-storage,
+.customizable-profile {
+  display: flex;
+  align-items: center;
+  border: 2px solid hsl(231, 11%, 63%);
+  border-radius: 5px;
+  padding: 5px 20px;
+}
+@media screen and (max-width: 720px) {
+  .online-service,
+  .larger-storage,
+  .customizable-profile {
+    margin-bottom: 20px;
+    padding-block: 20px;
+  }
+}
+
+.step-three-article input {
+  accent-color: hsl(243, 100%, 62%);
+  width: 15px;
+  height: 15px;
+}
+@media screen and (max-width: 720px) {
+  .step-three-article input {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.content {
+  margin-left: 20px;
+}
+
+.price {
+  margin-left: auto;
+}

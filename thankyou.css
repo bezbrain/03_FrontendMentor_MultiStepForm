@@ -1,0 +1,46 @@
+.thank-you {
+  width: 55%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  z-index: 20;
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  .thank-you {
+    height: 500px;
+    position: static;
+    margin-block: auto;
+    width: 85%;
+    background-color: white;
+    padding: 8% 4%;
+    z-index: 20;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .thank-you img {
+    width: 90px !important;
+  }
+
+  .thank-you h1 {
+    font-size: 30px;
+  }
+
+  .thank-you p {
+    font-size: 20px;
+  }
+}
+
+.thank-you img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+
+.thank-you p {
+  text-align: center;
+  margin-top: 10px;
+}

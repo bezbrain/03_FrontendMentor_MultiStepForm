@@ -1,0 +1,116 @@
+/* ======== */
+/* Finishing up */
+/* ======== */
+.step-four-article {
+  position: relative;
+  margin-inline: auto;
+  width: 55%;
+  font-size: 14px;
+  margin-top: 20px;
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  .step-four-article {
+    height: 500px;
+    position: static;
+    margin-block: auto;
+    width: 85%;
+    background-color: white;
+    padding: 8% 4%;
+    z-index: 20;
+    border-radius: 10px;
+    display: none;
+  }
+
+  .step-four-article h1 {
+    font-size: 30px;
+  }
+
+  .step-four-article p {
+    font-size: 20px;
+  }
+}
+
+.finish-container {
+  background-color: hsl(228, 25%, 92%);
+  margin-top: 1vw;
+  border-radius: 5px;
+  padding-block: 15px;
+}
+@media screen and (max-width: 720px) {
+  .finish-container {
+    margin-top: 30px;
+  }
+}
+
+.finish-content-con,
+.finsh-online-service,
+.finsh-larger-storage,
+.total-container {
+  display: flex;
+  padding: 5px 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.finish-content p:first-child {
+  color: hsl(213, 96%, 18%);
+  font-weight: 900;
+}
+
+.finish-content a {
+  color: hsl(231, 11%, 63%);
+  font-size: 12px;
+}
+@media screen and (max-width: 720px) {
+  .finish-content a {
+    font-size: 18px;
+  }
+}
+
+.finish-content a:hover {
+  color: hsl(243, 100%, 62%);
+}
+
+.finish-content-con p:last-child {
+  color: hsl(213, 96%, 18%);
+  font-weight: 900;
+}
+
+hr {
+  width: 90%;
+  margin-inline: auto;
+}
+
+.total-container {
+  margin-top: 0.5vw;
+}
+@media screen and (max-width: 720px) {
+  .total-container {
+    margin-top: 3.5vw;
+  }
+}
+
+.total-container h2:last-child {
+  color: hsl(243, 100%, 62%);
+  font-weight: 900;
+}
+
+.step-four-btn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  background-color: hsl(243, 100%, 62%);
+  border: none;
+  color: white;
+  padding: 10px 1rem;
+  border-radius: 5px;
+}
+@media screen and (max-width: 720px) {
+  .step-four-btn {
+    position: absolute;
+    right: 55px;
+    bottom: 45px;
+  }
+}

@@ -1,0 +1,142 @@
+.step-two-article {
+  position: relative;
+  margin-inline: auto;
+  width: 55%;
+  margin-top: 20px;
+  display: none;
+}
+@media screen and (max-width: 720px) {
+  .step-two-article {
+    position: static;
+    margin-block: auto;
+    width: 85%;
+    background-color: white;
+    padding: 8% 4%;
+    z-index: 20;
+    border-radius: 10px;
+    font-size: 20px;
+    display: none;
+  }
+}
+
+.plans-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2vw;
+}
+@media screen and (max-width: 720px) {
+  .plans-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+  }
+
+  .plans-container div {
+    display: flex;
+    /* align-items: center !important; */
+    margin-bottom: 10px;
+    border-radius: 10px !important;
+  }
+
+  .plans-container div h3 {
+    margin-top: 0;
+  }
+
+  .plans-container img {
+    margin-inline: 20px;
+    width: 50px !important;
+  }
+
+  .plans-container h3 {
+    font-size: 20px !important;
+  }
+
+  .plans-container p {
+    font-size: 16px !important;
+  }
+}
+
+.plans-container div {
+  border: 2px solid hsl(231, 11%, 63%);
+  border-radius: 5px;
+  padding: 2% 15% 2% 3%;
+}
+
+.plans-container img {
+  width: 30px;
+}
+
+.plans-container h3 {
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.plans-container p {
+  font-size: 11px;
+}
+
+.go-back-btn {
+  position: absolute;
+  bottom: 15px;
+  border: none;
+  background: transparent;
+  color: hsl(231, 11%, 63%);
+  cursor: pointer;
+}
+
+.go-back-btn:hover {
+  color: hsl(213, 96%, 18%);
+}
+@media screen and (max-width: 720px) {
+  .go-back-btn {
+    bottom: 55px;
+  }
+}
+
+.duration-container {
+  position: relative;
+  background-color: hsl(228, 25%, 92%);
+  text-align: center;
+  margin-top: 25px;
+  padding-block: 15px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 720px) {
+  .duration-container {
+    padding-inline: 20px;
+  }
+
+  .duration-container p {
+    font-size: 20px;
+  }
+
+  .fa-toggle-off {
+    /* margin-block: auto !important; */
+    margin-top: 5px !important;
+  }
+
+  .fa-toggle-on {
+    /* margin-block: auto !important; */
+    margin-top: 5px !important;
+  }
+}
+
+.fa-toggle-off {
+  position: absolute;
+  font-size: 22px;
+  margin-left: 12px;
+  margin-top: -2px;
+}
+
+.fa-toggle-on {
+  position: absolute;
+  font-size: 22px;
+  margin-left: 12px;
+  margin-top: -2px;
+  z-index: -20;
+}
+
+.duration-container span {
+  margin-left: 50px;
+}

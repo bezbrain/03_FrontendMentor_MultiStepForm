@@ -69,14 +69,21 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* border: 2px solid red; */
-    margin-bottom: 0px;
+    left: 0 !important;
+  }
+
+  .constantAside div {
+    margin-bottom: 0px !important;
   }
 
   .constantAside span {
-    padding: 18px;
+    height: 80px;
+    width: 80px;
+    padding: 18px !important;
     margin: 10px;
-    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -98,8 +105,11 @@ main {
   border-radius: 50%;
   width: 20px;
   height: 20px;
+  padding: 10px;
   border: 2px solid white;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .steps-section {
@@ -111,289 +121,7 @@ main {
   color: white;
 }
 
-/* ======== */
-/* Personal info */
-/* ======== */
-.step-one-article {
-  position: relative;
-  margin-inline: auto;
-  margin-top: 20px;
-  /* display: none; */
-}
-@media screen and (max-width: 720px) {
-  .step-one-article {
-    position: static;
-    margin-block: auto;
-    width: 400px;
-    background-color: white;
-    padding: 8% 4%;
-    z-index: 20;
-    border-radius: 10px;
-    font-size: 20px;
-  }
-}
-
-.inputContainer {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1vw;
-  font-size: 14px;
-}
-@media screen and (max-width: 720px) {
-  .inputContainer {
-    margin-top: 20px;
-  }
-}
-
-.inputContainer input {
-  height: 35px;
-  border-radius: 5px;
-  padding-left: 15px;
-  outline: none;
-  margin-bottom: 10px;
-}
-
-.inputContainer input:focus {
-  background: #d4e5ee;
-}
-
-.step-one-btn,
-.step-two-btn,
-.step-three-btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  background-color: hsl(213, 96%, 18%);
-  padding: 10px 1rem;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-}
-/* Media Query: Personal Info */
-/* ======== */
-@media screen and (max-width: 720px) {
-  .step-one-btn,
-  .step-two-btn,
-  .step-three-btn {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-  }
-}
-
-/* ======== */
-/* Select Your Plan */
-/* ======== */
-.step-two-article {
-  position: relative;
-  margin-inline: auto;
-  width: 55%;
-  margin-top: 20px;
-  display: none;
-}
-
-.plans-container {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2vw;
-}
-
-.plans-container div {
-  border: 2px solid hsl(231, 11%, 63%);
-  border-radius: 5px;
-  padding: 2% 15% 2% 3%;
-}
-
-.plans-container img {
-  width: 30px;
-}
-
-.plans-container h3 {
-  font-size: 12px;
-  margin-top: 30px;
-}
-
-.plans-container p {
-  font-size: 11px;
-}
-
-.go-back-btn {
-  position: absolute;
-  bottom: 15px;
-  border: none;
-  background: transparent;
-  color: hsl(231, 11%, 63%);
-  cursor: pointer;
-}
-
-.go-back-btn:hover {
-  color: hsl(213, 96%, 18%);
-}
-
-.duration-container {
-  position: relative;
-  background-color: hsl(228, 25%, 92%);
-  text-align: center;
-  margin-top: 25px;
-  padding-block: 8px;
-  font-size: 12px;
-  border-radius: 5px;
-}
-
-.fa-toggle-off {
-  position: absolute;
-  font-size: 20px;
-  margin-left: 10px;
-}
-
-.fa-toggle-on {
-  position: absolute;
-  font-size: 20px;
-  margin-left: 10px;
-  z-index: -20;
-}
-
-.duration-container span {
-  margin-left: 40px;
-}
-
-/* ======== */
-/* Pick add-ons */
-/* ======== */
-.step-three-article {
-  position: relative;
-  margin-inline: auto;
-  width: 55%;
-  font-size: 14px;
-  margin-top: 20px;
-  display: none;
-}
-
-.online-service {
-  margin-top: 2.5vw;
-}
-
-.larger-storage,
-.customizable-profile {
-  margin-top: 5px;
-}
-
-.online-service,
-.larger-storage,
-.customizable-profile {
-  display: flex;
-  align-items: center;
-  border: 2px solid hsl(231, 11%, 63%);
-  border-radius: 5px;
-  padding: 5px 20px;
-}
-
-.step-three-article input {
-  accent-color: hsl(243, 100%, 62%);
-}
-
-.content {
-  margin-left: 20px;
-}
-
-.price {
-  margin-left: auto;
-}
-
-/* ======== */
-/* Finishing up */
-/* ======== */
-.step-four-article {
-  position: relative;
-  margin-inline: auto;
-  width: 55%;
-  font-size: 14px;
-  margin-top: 20px;
-  display: none;
-}
-
-.finish-container {
-  background-color: hsl(228, 25%, 92%);
-  margin-top: 1vw;
-  border-radius: 5px;
-  padding-block: 15px;
-}
-
-.finish-content-con,
-.finsh-online-service,
-.finsh-larger-storage,
-.total-container {
-  display: flex;
-  padding: 5px 20px;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.finish-content p:first-child {
-  color: hsl(213, 96%, 18%);
-  font-weight: 900;
-}
-
-.finish-content a {
-  color: hsl(231, 11%, 63%);
-  font-size: 12px;
-}
-
-.finish-content a:hover {
-  color: hsl(243, 100%, 62%);
-}
-
-.finish-content-con p:last-child {
-  color: hsl(213, 96%, 18%);
-  font-weight: 900;
-}
-
-hr {
-  width: 90%;
-  margin-inline: auto;
-}
-
-.total-container {
-  margin-top: 0.5vw;
-}
-
-.total-container h2:last-child {
-  color: hsl(243, 100%, 62%);
-  font-weight: 900;
-}
-
-.step-four-btn {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  cursor: pointer;
-  background-color: hsl(243, 100%, 62%);
-  border: none;
-  color: white;
-  padding: 10px 1rem;
-  border-radius: 5px;
-}
-
-/* ======== */
-/* Thank you */
-/* ======== */
-.thank-you {
-  width: 55%;
-  margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  display: none;
-}
-
-.thank-you img {
-  width: 60px;
-  margin-bottom: 20px;
-}
-
-.thank-you p {
-  text-align: center;
-  margin-top: 10px;
+/* Added CSS for Aside */
+.new-aside-margin {
+  margin-bottom: 30px;
 }
