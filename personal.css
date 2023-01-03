@@ -73,3 +73,13 @@
     bottom: 45px;
   }
 }
+
+/* ======== */
+/* Added CSS: backgroundColor for all circles */
+/* ======== */
+.added-background-color {
+  background-color: hsl(206, 94%, 87%);
+  border: 2px solid hsl(206, 94%, 87%) !important;
+  color: black;
+  font-size: 16px;
+}

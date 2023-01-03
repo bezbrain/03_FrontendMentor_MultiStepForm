@@ -33,7 +33,6 @@
 
   .plans-container div {
     display: flex;
-    /* align-items: center !important; */
     margin-bottom: 10px;
     border-radius: 10px !important;
   }
