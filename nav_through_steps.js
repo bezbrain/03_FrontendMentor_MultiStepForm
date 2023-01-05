@@ -53,19 +53,42 @@ goBackBtn.forEach((eachBackBtn) => {
 const personalInfoName = document.querySelector(".personal-info-name");
 const personalInfoEmail = document.querySelector(".personal-info-email");
 const personalInfoNum = document.querySelector(".personal-info-num");
-// console.log(personalInfoNum);
 
-const fieldRequired = document.querySelectorAll(".required");
+const requiredName = document.querySelector(".required-name");
+const requiredEmail = document.querySelector(".required-email");
+const requiredNum = document.querySelector(".required-num");
 
 function emptySpace() {
-        if(personalInfoName.value == "" || personalInfoEmail.value == "" || personalInfoNum == "") {
-            fieldRequired.forEach((eachField) => {
-                eachField.innerHTML = "This field is required";
-            });
+        // Name input if-statement
+        if(personalInfoName.value == "") {
+            requiredName.innerHTML = "This field is required";
             stepOneArticle.style.display = "block";
             stepTwoArticle.style.display = "none";
         }
         else {
+            requiredName.innerHTML = "";
+            stepOneArticle.style.display = "none";
+        }
+
+        // Email input if-statement
+        if(personalInfoEmail.value == "") {
+            requiredEmail.innerHTML = "This field is required";
+            stepOneArticle.style.display = "block";
+            stepTwoArticle.style.display = "none";
+        }
+        else {
+            requiredEmail.innerHTML = "";
+            stepOneArticle.style.display = "none";
+        }
+
+        // Number input if-statement
+        if(personalInfoNum.value == "") {
+            requiredNum.innerHTML = "This field is required";
+            stepOneArticle.style.display = "block";
+            stepTwoArticle.style.display = "none";
+        }
+        else {
+            requiredNum.innerHTML = "";
             stepOneArticle.style.display = "none";
         }
 }
