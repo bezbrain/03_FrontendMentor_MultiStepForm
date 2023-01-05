@@ -52,6 +52,15 @@
   background: #d4e5ee;
 }
 
+.field-required {
+  display: flex;
+  justify-content: space-between;
+}
+
+.field-required p:last-child {
+  color: red;
+}
+
 .step-one-btn,
 .step-two-btn,
 .step-three-btn {

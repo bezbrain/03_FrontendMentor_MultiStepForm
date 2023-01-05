@@ -18,10 +18,7 @@ let getStyleOne = window.getComputedStyle(stepOneArticle);
 let getStyleTwo = window.getComputedStyle(stepTwoArticle);
 let getStyleThree = window.getComputedStyle(stepThreeArticle);
 let getStyleFour = window.getComputedStyle(stepFourArticle);
-// console.log(getStyle.display);
-
-// let displayType = getStyle.getPropertyValue("display");
-// console.log(displayType);
+// console.log(getStyleOne.display);
 
 
 // =====>>>
@@ -34,25 +31,32 @@ let fourthCircle = constantAside.children[3].firstChild.nextElementSibling;
 
 
 
-if(getStyleOne.display !== "none") {
-    console.log("I am flex ONE");
-    firstCircle.classList.add("added-background-color");
+function circles() {
+    if(getStyleOne.display !== "none") {
+        console.log("I am flex ONE");
+        firstCircle.classList.add("added-background-color");
+    }
+    else if(getStyleTwo.display !== "none") {
+        console.log("I am flex TWO");
+        firstCircle.classList.remove("added-background-color");
+        secondCircle.classList.add("added-background-color");
+    }
+    else if(getStyleThree.display !== "none") {
+        console.log("I am flex THREE");
+        secondCircle.classList.remove("added-background-color");
+        thirdCircle.classList.add("added-background-color");
+    }
+    else if(getStyleFour.display !== "none") {
+        console.log("I am flex FOUR");
+        thirdCircle.classList.remove("added-background-color");
+        fourthCircle.classList.add("added-background-color");
+    }
+    else {
+        console.log("I am flex FIVE");
+        fourthCircle.classList.add("added-background-color");
+    }
 }
-else if(getStyleTwo.display !== "none") {
-    console.log("I am flex TWO");
-    secondCircle.classList.add("added-background-color");
-}
-else if(getStyleThree.display !== "none") {
-    console.log("I am flex THREE");
-    thirdCircle.classList.add("added-background-color");
-}
-else if(getStyleFour.display !== "none") {
-    console.log("I am flex FOUR");
-    fourthCircle.classList.add("added-background-color");
-}
-else {
-    console.log("I am flex FIVE");
-    fourthCircle.classList.add("added-background-color");
-}
+circles();
+
 
 

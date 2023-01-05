@@ -34,7 +34,7 @@
       <aside class="constantAside">
         <!-- Section One -->
         <div class="step-one steps">
-          <span class="first">1</span>
+          <span class="first steps-numbers">1</span>
           <section class="steps-section">
             <p>STEP 1</p>
             <p>YOUR INFO</p>
@@ -42,7 +42,7 @@
         </div>
         <!-- Section Two -->
         <div class="step-two steps">
-          <span class="second">2</span>
+          <span class="second steps-numbers">2</span>
           <section class="steps-section">
             <p>STEP 2</p>
             <p>SELECT PLAN</p>
@@ -50,7 +50,7 @@
         </div>
         <!-- Section Three -->
         <div class="step-three steps">
-          <span class="third">3</span>
+          <span class="third steps-numbers">3</span>
           <section class="steps-section">
             <p>STEP 3</p>
             <p>ADD-ONS</p>
@@ -58,7 +58,7 @@
         </div>
         <!-- Section Four -->
         <div class="step-four steps">
-          <span class="fourth">4</span>
+          <span class="fourth steps-numbers">4</span>
           <section class="steps-section">
             <p>STEP 4</p>
             <p>SUMMARY</p>
@@ -72,18 +72,41 @@
       <!--  -->
       <!-- Article Section (Personal Info) -->
       <!--  -->
-      <article class="step-one-article" data-id="personal">
+      <article class="step-one-article">
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
         <div class="inputContainer">
-          <p>Name</p>
-          <input type="name" placeholder="e.g. Topper Bello" />
-          <p>Email Address</p>
-          <input type="email" placeholder="e.g. topperbello@email.com" />
-          <p>Phone Number</p>
-          <input type="number" placeholder="e.g. +2348023456789" />
+          <span class="field-required">
+            <p>Name</p>
+            <p class="required"></p>
+          </span>
+          <input
+            class="personal-info-name"
+            type="name"
+            placeholder="e.g. Topper Bello"
+          />
+
+          <span class="field-required">
+            <p>Email Address</p>
+            <p class="required"></p>
+          </span>
+          <input
+            class="personal-info-email"
+            type="email"
+            placeholder="e.g. topperbello@email.com"
+          />
+
+          <span class="field-required">
+            <p>Phone Number</p>
+            <p class="required"></p>
+          </span>
+          <input
+            class="personal-info-num"
+            type="number"
+            placeholder="e.g. +2348023456789"
+          />
         </div>
-        <button class="step-one-btn">Next Step</button>
+        <button class="step-one-btn steps-btn">Next Step</button>
       </article>
       <!-- End of Article Section -->
 
@@ -135,7 +158,7 @@
         </div>
 
         <button class="go-back-btn">Go Back</button>
-        <button class="step-two-btn">Next Step</button>
+        <button class="step-two-btn steps-btn">Next Step</button>
       </article>
 
       <!--  -->
@@ -171,7 +194,7 @@
         </div>
 
         <button class="go-back-btn">Go Back</button>
-        <button class="step-three-btn">Next Step</button>
+        <button class="step-three-btn steps-btn">Next Step</button>
       </article>
 
       <!--  -->
@@ -207,7 +230,7 @@
         </div>
 
         <button class="go-back-btn">Go Back</button>
-        <button class="step-four-btn">Confirm</button>
+        <button class="step-four-btn steps-btn">Confirm</button>
       </article>
 
       <!--  -->
@@ -228,5 +251,6 @@
     </main>
 
     <script src="./main.js"></script>
+    <script src="./nav_through_steps.js"></script>
   </body>
 </html>
