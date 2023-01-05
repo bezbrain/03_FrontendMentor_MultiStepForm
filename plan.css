@@ -108,16 +108,17 @@
 
   .duration-container p {
     font-size: 20px;
+    z-index: 50;
   }
 
   .fa-toggle-off {
-    /* margin-block: auto !important; */
     margin-top: 5px !important;
+    z-index: 200;
   }
 
   .fa-toggle-on {
-    /* margin-block: auto !important; */
     margin-top: 5px !important;
+    z-index: -20;
   }
 }
 
@@ -126,6 +127,8 @@
   font-size: 22px;
   margin-left: 12px;
   margin-top: -2px;
+  cursor: pointer;
+  z-index: 20;
 }
 
 .fa-toggle-on {
@@ -133,6 +136,7 @@
   font-size: 22px;
   margin-left: 12px;
   margin-top: -2px;
+  cursor: pointer;
   z-index: -20;
 }
 

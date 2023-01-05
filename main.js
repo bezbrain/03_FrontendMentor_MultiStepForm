@@ -18,6 +18,7 @@ let getStyleOne = window.getComputedStyle(stepOneArticle);
 let getStyleTwo = window.getComputedStyle(stepTwoArticle);
 let getStyleThree = window.getComputedStyle(stepThreeArticle);
 let getStyleFour = window.getComputedStyle(stepFourArticle);
+let getStyleFour2 = window.getComputedStyle(thankYou);
 // console.log(getStyleOne.display);
 
 
@@ -51,7 +52,7 @@ function circles() {
         thirdCircle.classList.remove("added-background-color");
         fourthCircle.classList.add("added-background-color");
     }
-    else {
+    else if(getStyleFour2.display !== "none") {
         console.log("I am flex FIVE");
         fourthCircle.classList.add("added-background-color");
     }
