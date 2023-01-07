@@ -2,8 +2,7 @@
 // OnClick of "Next Step" btn, move to the next step
 // =====>>>
 const stepsBtn = document.querySelectorAll(".steps-btn");
-const inputV = document.querySelectorAll(".in");
-const pi = document.querySelectorAll(".pi");
+
 
 stepsBtn.forEach((eachStepBtn) => {
     eachStepBtn.onclick = (e) => {
@@ -15,7 +14,6 @@ stepsBtn.forEach((eachStepBtn) => {
         parentNextSibling.style.display = "block";
 
         // emptySpace();
-        testing();
         circles();
 
         // Using Tenary operation to display thank-you container in block
@@ -55,7 +53,10 @@ goBackBtn.forEach((eachBackBtn) => {
 // =====>>>
 // PERSONAL INFO: Throw an error msg if at least one input is empty
 // =====>>>
-function testing() {
+const inputV = document.querySelectorAll(".in");
+const pi = document.querySelectorAll(".pi");
+
+function emptySpace() {
     inputV.forEach((inp, j) => {
         if(inp.value == "") {
             pi[j].innerHTML = "This field is required";
@@ -69,67 +70,76 @@ function testing() {
 }
 
 
-// const personalInfoName = document.querySelector(".personal-info-name");
-// const personalInfoEmail = document.querySelector(".personal-info-email");
-// const personalInfoNum = document.querySelector(".personal-info-num");
-
-// const requiredName = document.querySelector(".required-name");
-// const requiredEmail = document.querySelector(".required-email");
-// const requiredNum = document.querySelector(".required-num");
-// 
-// function emptySpace() {
-//         // Name input if-statement
-//         if(personalInfoName.value == "") {
-//             console.log("Name is empty");
-//             requiredName.innerHTML = "This field is required";
-//             stepOneArticle.style.display = "block";
-//             stepTwoArticle.style.display = "none";
-//         }
-//         else {
-//             requiredName.innerHTML = "";
-//         }
-
-//         // Email input if-statement
-//         if(personalInfoEmail.value == "") {
-//             console.log("Email is emoty");
-//             requiredEmail.innerHTML = "This field is required";
-//             stepOneArticle.style.display = "block";
-//             stepTwoArticle.style.display = "none";
-//         }
-//         else {
-//             requiredEmail.innerHTML = "";
-//         }
-
-//         // Number input if-statement
-//         if(personalInfoNum.value == "") {
-//             console.log("Number is empty");
-//             requiredNum.innerHTML = "This field is required";
-//             stepOneArticle.style.display = "block";
-//             stepTwoArticle.style.display = "none";
-//         }
-//         else {
-//             requiredNum.innerHTML = "";
-//         }
-// }
 
 
 // =====>>>
 // Select your plan
 // =====>>>
-const durationCon = document.querySelector(".duration-container");
+const plans = document.querySelectorAll(".plans");
+
+const arcadeAmt = document.querySelector(".arcade-amount");
+const advAmt = document.querySelector(".adv-amount");
+const proAmt = document.querySelector(".pro-amount");
+
 const switchIcon = document.querySelector(".switch-icon");
-let firstIconChild = switchIcon.children[0];
+const monthlySwitcher = document.querySelector(".monthly");
+const yearlySwitcher = document.querySelector(".yearly");
+const yearText = document.querySelectorAll(".yearly-text");
 
-// const monthlySwitcher = 
+
+const switchTextColorYear = switchIcon.children[3];
+const switchTextColorMonth = switchIcon.children[0];
+
+const getZIndexMonthly = window.getComputedStyle(monthlySwitcher);
+const getZIndexYearly = window.getComputedStyle(yearlySwitcher);
+
+// Toggling Monthly/Yearly
+monthlySwitcher.onclick = () => {
+    if(getZIndexMonthly.zIndex == "20") {
+        monthlySwitcher.style.zIndex = "-20";
+        yearlySwitcher.style.zIndex = "20";
+        switchTextColorMonth.style.fontWeight = "200";
+        switchTextColorYear.classList.add("text-color-year");
+
+        yearText.forEach((eachYearText, j) => {
+            eachYearText.textContent = "2 months free";
+        });
+
+        arcadeAmt.textContent = "$90/yr";
+        advAmt.textContent = "$120/yr";
+        proAmt.textContent = "$150/yr";
+    }
+}
+
+yearlySwitcher.onclick = () => {
+    if(getZIndexYearly.zIndex == "20") {
+        yearlySwitcher.style.zIndex = "-20";
+        monthlySwitcher.style.zIndex = "20";
+        switchTextColorYear.classList.remove("text-color-year");
+        switchTextColorMonth.style.fontWeight = "800";
+
+        yearText.forEach((eachYearText) => {
+            eachYearText.textContent = "";
+        });
+
+        arcadeAmt.textContent = "$9/mo";
+        advAmt.textContent = "$12/mo";
+        proAmt.textContent = "$15/mo";
+        
+    }
+}
+
+// Picking preferred plan
+plans.forEach((eachPlan) => {
+    eachPlan.onclick = (e) => {
+        plans.forEach((defaultBorder) => {
+            defaultBorder.style.border = "2px solid hsl(231, 11%, 63%)";
+        });
+        
+        e.currentTarget.style.border = "4px solid hsl(231, 20%, 54%)";
+    }
+});
 
 
-// const monthlySwitcher = switchIcon.querySelector(".fa-toggle-off");
-// const yearlySwitcher = switchIcon.querySelector(".fa-toggle-on");
-// console.log(monthlySwitcher);
-// console.log(yearlySwitcher);
-
-// monthlySwitcher.onclick = () => {
-//     console.log("I am monthly");
-// }
 
 

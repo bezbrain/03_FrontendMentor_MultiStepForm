@@ -11,7 +11,7 @@
     margin-block: auto;
     width: 85%;
     background-color: white;
-    padding: 8% 4%;
+    padding: 7% 4%;
     z-index: 20;
     border-radius: 10px;
     font-size: 20px;
@@ -58,7 +58,8 @@
 .plans-container div {
   border: 2px solid hsl(231, 11%, 63%);
   border-radius: 5px;
-  padding: 2% 15% 2% 3%;
+  padding: 2% 11% 2% 3%;
+  cursor: pointer;
 }
 
 .plans-container img {
@@ -108,21 +109,24 @@
 
   .duration-container p {
     font-size: 20px;
-    z-index: 50;
   }
 
-  .fa-toggle-off {
+  .monthly {
     margin-top: 5px !important;
-    z-index: 200;
+    z-index: 20;
   }
 
-  .fa-toggle-on {
+  .yearly {
     margin-top: 5px !important;
     z-index: -20;
   }
 }
 
-.fa-toggle-off {
+.switch-icon span:first-child {
+  font-weight: 800;
+}
+
+.monthly {
   position: absolute;
   font-size: 22px;
   margin-left: 12px;
@@ -131,7 +135,7 @@
   z-index: 20;
 }
 
-.fa-toggle-on {
+.yearly {
   position: absolute;
   font-size: 22px;
   margin-left: 12px;
@@ -140,6 +144,13 @@
   z-index: -20;
 }
 
-.duration-container span {
+.duration-container span:last-child {
   margin-left: 50px;
+}
+
+/* ======== */
+/* Added CSS */
+/* ======== */
+.text-color-year {
+  font-weight: 800;
 }
