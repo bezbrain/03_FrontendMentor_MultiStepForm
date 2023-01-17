@@ -72,7 +72,7 @@
       <!--  -->
       <!-- Article Section (Personal Info) -->
       <!--  -->
-      <article class="step-one-article">
+      <article class="step-one-article" id="personal-id">
         <h1>Personal info</h1>
         <p>Please provide your name, email address, and phone number.</p>
         <div class="inputContainer">
@@ -113,12 +113,12 @@
       <!--  -->
       <!-- Select Your Plan -->
       <!--  -->
-      <article class="step-two-article">
+      <article class="step-two-article" id="plan-id">
         <h1>Select your plan</h1>
         <p>You have the option of monthly or yearly billing.</p>
         <div class="plans-container">
           <!-- Each Plan container -->
-          <div class="arcade plans">
+          <div class="arcade plans" data-id="arc">
             <img
               src="./multi-step-form-main/assets/images/icon-arcade.svg"
               alt="arcade"
@@ -129,7 +129,7 @@
               <p class="yearly-text"></p>
             </span>
           </div>
-          <div class="advanced plans">
+          <div class="advanced plans" data-id="adv">
             <img
               src="./multi-step-form-main/assets/images/icon-advanced.svg"
               alt="advanced"
@@ -140,7 +140,7 @@
               <p class="yearly-text"></p>
             </span>
           </div>
-          <div class="pro plans">
+          <div class="pro plans" data-id="pro">
             <img
               src="./multi-step-form-main/assets/images/icon-pro.svg"
               alt="pro"
@@ -159,6 +159,7 @@
             ></span><span class="yearly"><i class="fa-solid fa-toggle-on"></span></i> <span>Yearly</span>
           </p>
         </div>
+        <p class="select-plan"></p>
 
         <button class="go-back-btn">Go Back</button>
         <button class="step-two-btn steps-btn">Next Step</button>
@@ -167,7 +168,7 @@
       <!--  -->
       <!-- Pick add-ons -->
       <!--  -->
-      <article class="step-three-article">
+      <article class="step-three-article" id="pick-id">
         <h1>Pick add-ons</h1>
         <p>Add-ons help enhance your gaming experience.</p>
         <!-- Each add-on container -->
@@ -179,8 +180,8 @@
           </div>
           <p class="price">+$1/mo</p>
         </div>
-        <div class="larger-storage">
-          <input type="checkbox" />
+        <div class="larger-storage" >
+          <input type="checkbox" class="checkb"/>
           <div class="content">
             <h4>Larger storage</h4>
             <p>Extra 1TB of cloud save</p>
@@ -188,7 +189,7 @@
           <p class="price">+$2/mo</p>
         </div>
         <div class="customizable-profile">
-          <input type="checkbox" />
+          <input type="checkbox" class="checkb"/>
           <div class="content">
             <h4>Customizable profile</h4>
             <p>Custom theme on your profile</p>
@@ -203,7 +204,7 @@
       <!--  -->
       <!-- Finishing up -->
       <!--  -->
-      <article class="step-four-article">
+      <article class="step-four-article" id="finish-id">
         <h1>Finishing up</h1>
         <p>Double-check everything looks OK before confirming.</p>
         <!-- Finish up containers -->
